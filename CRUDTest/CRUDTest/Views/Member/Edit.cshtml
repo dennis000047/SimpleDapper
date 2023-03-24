@@ -1,0 +1,43 @@
+﻿@model CRUDTest.Service.MemberInfoService.MemberInfo
+
+<!-- 編輯頁 -->
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="h3 mb-4 text-gray-800 pt-4 text-center">編輯個人資訊</h1>
+    <div class="row mb-2">
+        <div class="col-4"></div>
+        <div class="col-lg-4">
+            <div class="card shadow">
+                <div class="card-header">
+                    編輯個人資訊
+                </div>
+                <div class="card-body">
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">姓名</label>
+                        <div class="col-sm-4">
+                            <input id="name" type="text" value="@Model.Name" class="form-control" placeholder="請輸入姓名">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">電話</label>
+                        <div class="col-sm-4">
+                            <input id="tel" type="text" value="@Model.Tel" class="form-control" placeholder="請輸入電話">
+                        </div>
+                    </div>
+                     <input id="id" type="hidden" value="@Model.Id" />
+                </div>
+                <div class="card-footer">
+                    <button id="btnSubmit" class="btn btn-primary">編輯</button>
+                    <a asp-action="Index" asp-controller="Member" class="btn btn-secondary">回列表</a>
+                </div>
+            </div>
+        </div>
+         <div class="col-4"></div>
+    </div>
+</div>
+
+@section Scripts{
+<script src="~/js/view/edit.js"></script>
+    <script src="~/js/view/site.js"></script>
+}
